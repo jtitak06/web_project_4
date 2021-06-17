@@ -1,5 +1,5 @@
 const editButton = document.querySelector('.profile__edit');
-const closeButton = document.querySelector('.popup__button');
+const closeButton = document.querySelector('.popup__button, .form__button');
 const form = document.querySelector('.form');
 
 form.addEventListener('submit', (event) => {
@@ -8,8 +8,8 @@ form.addEventListener('submit', (event) => {
   const nameInput = document.querySelector('.form__input_type_name');
   const aboutInput = document.querySelector('.form__input_type_about');
   
-  const profileName = document.querySelector('.profile__value_type_name');
-  const profileAbout = document.querySelector('.profile__value_type_about');
+  const profileName = document.querySelector('.profile__name');
+  const profileAbout = document.querySelector('.profile__description');
   
   profileName.textContent = nameInput.value;
   profileAbout.textContent = aboutInput.value;

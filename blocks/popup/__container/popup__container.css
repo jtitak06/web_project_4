@@ -7,3 +7,11 @@
     flex-direction: column;
     width: 430px;
   }
+
+@media screen and (max-width: 580px) {
+  .popup__container {
+    width: auto;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+}

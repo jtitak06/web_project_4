@@ -5,11 +5,19 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: 18px;
     border: 1px solid #ffffff;
+    margin-top: 38px;
 }
 
 .profile__edit:hover {
     opacity: .6;
+}
+
+@media screen and (max-width: 560px) {
+    .profile__edit {
+        height: 16px;
+        width: 16px;
+        margin-top: 28px;
+    }
 }
 

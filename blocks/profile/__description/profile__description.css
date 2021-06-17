@@ -6,3 +6,17 @@
     line-height: 21.78px;
     margin: 0;
 }
+
+@media screen and (max-width: 745px) {
+    .profile__description {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .profile__description {
+        font-size: 14px;
+        line-height: 16.94px;
+    }
+}

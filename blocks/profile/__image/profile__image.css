@@ -3,3 +3,11 @@
     border-radius: 80px;
     margin-right: 31.25px;
 }
+
+@media screen and (max-width: 745px) {
+    .profile__image {
+        width: 165px;
+        margin: auto;
+        height: auto;
+    }
+}
