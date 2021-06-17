@@ -1,0 +1,22 @@
+.popup__button {
+  position: relative;
+  top: -350px;
+  left: 450px;
+  width: 40px;
+  background-color: transparent;
+  color: white;
+  border: none;
+  transform: rotate(45deg);
+}
+
+.popup__button:hover {
+    opacity: 0.6;
+}
+
+@media screen and (max-width: 580px) {
+    .popup__button {
+        width: 26px;
+        top: -360px;
+        left: 225px;
+    }
+}

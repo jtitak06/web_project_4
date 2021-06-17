@@ -1,0 +1,7 @@
+.element__button {
+    border: none;
+    background-color: #ffffff;
+    font-family: 'Inter', Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
