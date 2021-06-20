@@ -3,6 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Jacques Cousteau, Explorer" />
     <title>Around The U.S.</title>
     <link rel="stylesheet" type="text/css" href="./pages/index.css" />
   </head>
@@ -10,8 +11,8 @@
     <div class="page__container">
       <header class="header">
         <img class="header__logo" src="./images/logo.svg" alt="logo" />
-        <p></p>
       </header>
+      <main>
       <section class="profile">
         <img
           class="profile__image"
@@ -20,115 +21,83 @@
         />
         <div class="profile__details">
         <div class="profile__info">
-          <h2 class="profile__name">Jacques Cousteau</h2>
-          <button class="profile__edit">
-            <img
-              class="profile__pencil"
-              src="./images/pencil.png"
-              alt="pencil"
-            />
+          <h1 class="profile__name">Jacques Cousteau</h1>
+          <button class="profile__edit" type="button">
           </button>
           </div>
           <p class="profile__description">Explorer</p>
           </div>
-        <button class="profile__add-button">
+        <button class="profile__add-button" type="button">
           <img class="profile__plus-sign" src="./images/plus.png" alt="plus" />
         </button>
         </section>
-        <div class="popup">
-          <div class="popup__container">
-            <h3 class="popup__title">Edit Profile</h3>
-            <form action="" class="form">
-              <input
-                type="text"
-                name="name"
-                class="form__input form__input_type_name"
-                value="Jacques Cousteau"
-              />
-              <input
-                type="text"
-                name="about"
-                class="form__input form__input_type_about"
-                value="Explorer"
-              />
-              <button class="form__button" type="submit">Save</button>
-            </form>
-            <button class="popup__button">
-              <img src="./images/plus.png" alt="plus" />
-            </button>
-          </div>
-        </div>
-      <section class="elements">
-        <div class="element">
-          <img
-            class="element__image"
-            src="./images/yosemite-valley.png"
-            alt="yosemite-valley"
-          />
+      <section>
+        <ul class="elements">
+        <li class="element" style="background-image: url('./images/yosemite-valley.png');">
           <div class="element__info">
             <h3 class="element__title">Yosemite Valley</h3>
-            <button class="element__button">♡</button>
+            <button class="element__button" style="background-image: url('./images/heart.svg');"></button>
           </div>
-        </div>
-        <div class="element">
-          <img
-            class="element__image"
-            src="./images/lake-louise.png"
-            alt="lake-louise"
-          />
+        </li>
+        <li class="element" style="background-image: url('./images/lake-louise.png');">
           <div class="element__info">
             <h3 class="element__title">Lake Louise</h3>
-            <button class="element__button">♡</button>
+            <button class="element__button" style="background-image: url('./images/heart.svg');"></button>
           </div>
-        </div>
-        <div class="element">
-          <img
-            class="element__image"
-            src="./images/bald-mountains.png"
-            alt="bald-mountains"
-          />
+        </li>
+        <li class="element" style="background-image: url('./images/bald-mountains.png');">
           <div class="element__info">
             <h3 class="element__title">Bald Mountains</h3>
-            <button class="element__button">♡</button>
+            <button class="element__button" style="background-image: url('./images/heart.svg');"></button>
           </div>
-        </div>
-        <div class="element">
-          <img
-            class="element__image"
-            src="./images/latemar.png"
-            alt="latemar"
-          />
+        </li>
+        <li class="element" style="background-image: url('./images/latemar.png');">
           <div class="element__info">
             <h3 class="element__title">Latemar</h3>
-            <button class="element__button">♡</button>
+            <button class="element__button" style="background-image: url('./images/heart.svg');"></button>
           </div>
-        </div>
-        <div class="element">
-          <img
-            class="element__image"
-            src="./images/vanoise-national-park.png"
-            alt="vanoise-national-park"
-          />
+        </li>
+        <li class="element" style="background-image: url('./images/vanoise-national-park.png');">
           <div class="element__info">
             <h3 class="element__title">Vanoise National Park</h3>
-            <button class="element__button">♡</button>
+            <button class="element__button" style="background-image: url('./images/heart.svg');"></button>
           </div>
-        </div>
-        <div class="element">
-          <img
-            class="element__image"
-            src="./images/lago-di-braies.png"
-            alt="lago-di-braies"
-          />
+        </li>
+        <li class="element" style="background-image: url('./images/lago-di-braies.png');">
           <div class="element__info">
             <h3 class="element__title">Lago di Braies</h3>
-            <button class="element__button">♡</button>
+            <button class="element__button" style="background-image: url('./images/heart.svg');"></button>
           </div>
-        </div>
+        </li>
+        </ul>
       </section>
+      </main>
       <footer class="footer">
         <p class="footer__copyright">© 2021 Around The U.S.</p>
       </footer>
+    </div>
+    <div class="popup">
+      <div class="popup__container">
+        <h3 class="popup__title">Edit Profile</h3>
+        <form action="#" class="form">
+          <input
+            type="text/paceholder"
+            name="name"
+            class="form__input form__input_type_name"
+            placeholder="Jacques Cousteau"
+          />
+          <input
+            type="text"
+            name="about"
+            class="form__input form__input_type_about"
+            placeholder="Explorer"
+          />
+          <button class="form__button" type="submit">Save</button>
+        </form>
+        <button class="popup__button">
+          <img src="./images/plus.png" alt="plus" />
+        </button>
+      </div>
     </div>
     <script src="./pages/index.js"></script>
   </body>
