@@ -1,9 +1,11 @@
 .element__button {
     border: none;
     background-color: #ffffff;
-    font-family: 'Inter', Arial, sans-serif;
-    font-size: 24px;
-    margin-bottom: 5px;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 21px;
+    height: 19px;
+    margin-bottom: 35px;
 }
 
 .element__button:hover {

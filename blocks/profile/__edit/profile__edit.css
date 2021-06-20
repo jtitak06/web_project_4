@@ -1,5 +1,8 @@
 .profile__edit {
     background-color: #000000;
+    background-image: url('../../../images/pencil.png');
+    background-repeat: no-repeat;
+    background-position: center;
     width: 24px;
     height: 24px;
     display: flex;
@@ -20,4 +23,3 @@
         margin-top: 28px;
     }
 }
-
