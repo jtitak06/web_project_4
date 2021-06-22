@@ -13,64 +13,89 @@
         <img class="header__logo" src="./images/logo.svg" alt="logo" />
       </header>
       <main>
-      <section class="profile">
-        <img
-          class="profile__image"
-          src="images/jacques-cousteau.jpg"
-          alt="jacques-cousteau"
-        />
-        <div class="profile__details">
-        <div class="profile__info">
-          <h1 class="profile__name">Jacques Cousteau</h1>
-          <button class="profile__edit" type="button" aria-label="edit">
-          </button>
+        <section class="profile">
+          <img
+            class="profile__image"
+            src="images/jacques-cousteau.jpg"
+            alt="jacques-cousteau"
+          />
+          <div class="profile__details">
+            <div class="profile__info">
+              <h1 class="profile__name">Jacques Cousteau</h1>
+              <button
+                class="profile__edit"
+                type="button"
+                aria-label="edit"
+              ></button>
+            </div>
+            <p class="profile__description">Explorer</p>
           </div>
-          <p class="profile__description">Explorer</p>
-          </div>
-        <button class="profile__add-button" type="button">
-          <img class="profile__plus-sign" src="./images/plus.png" alt="plus" />
-        </button>
+          <button
+            class="profile__add-button"
+            type="button"
+            aria-label="add"
+          ></button>
         </section>
-      <section>
-        <ul class="elements">
-        <li class="element" style="background-image: url('./images/yosemite-valley.png');">
-          <div class="element__info">
-            <h2 class="element__title">Yosemite Valley</h2>
-            <button class="element__button" aria-label="heart"></button>
-          </div>
-        </li>
-        <li class="element" style="background-image: url('./images/lake-louise.png');">
-          <div class="element__info">
-            <h2 class="element__title">Lake Louise</h2>
-            <button class="element__button" aria-label="heart"></button>
-          </div>
-        </li>
-        <li class="element" style="background-image: url('./images/bald-mountains.png');">
-          <div class="element__info">
-            <h2 class="element__title">Bald Mountains</h2>
-            <button class="element__button" aria-label="heart"></button>
-          </div>
-        </li>
-        <li class="element" style="background-image: url('./images/latemar.png');">
-          <div class="element__info">
-            <h2 class="element__title">Latemar</h2>
-            <button class="element__button" aria-label="heart"></button>
-          </div>
-        </li>
-        <li class="element" style="background-image: url('./images/vanoise-national-park.png');">
-          <div class="element__info">
-            <h2 class="element__title">Vanoise National Park</h2>
-            <button class="element__button" aria-label="heart"></button>
-          </div>
-        </li>
-        <li class="element" style="background-image: url('./images/lago-di-braies.png');">
-          <div class="element__info">
-            <h2 class="element__title">Lago di Braies</h2>
-            <button class="element__button" aria-label="heart"></button>
-          </div>
-        </li>
-        </ul>
-      </section>
+        <section>
+          <ul class="elements">
+            <li
+              class="element"
+              style="background-image: url('./images/yosemite-valley.png')"
+            >
+              <div class="element__info">
+                <h2 class="element__title">Yosemite Valley</h2>
+                <button class="element__button" aria-label="heart"></button>
+              </div>
+            </li>
+            <li
+              class="element"
+              style="background-image: url('./images/lake-louise.png')"
+            >
+              <div class="element__info">
+                <h2 class="element__title">Lake Louise</h2>
+                <button class="element__button" aria-label="heart"></button>
+              </div>
+            </li>
+            <li
+              class="element"
+              style="background-image: url('./images/bald-mountains.png')"
+            >
+              <div class="element__info">
+                <h2 class="element__title">Bald Mountains</h2>
+                <button class="element__button" aria-label="heart"></button>
+              </div>
+            </li>
+            <li
+              class="element"
+              style="background-image: url('./images/latemar.png')"
+            >
+              <div class="element__info">
+                <h2 class="element__title">Latemar</h2>
+                <button class="element__button" aria-label="heart"></button>
+              </div>
+            </li>
+            <li
+              class="element"
+              style="
+                background-image: url('./images/vanoise-national-park.png');
+              "
+            >
+              <div class="element__info">
+                <h2 class="element__title">Vanoise National Park</h2>
+                <button class="element__button" aria-label="heart"></button>
+              </div>
+            </li>
+            <li
+              class="element"
+              style="background-image: url('./images/lago-di-braies.png')"
+            >
+              <div class="element__info">
+                <h2 class="element__title">Lago di Braies</h2>
+                <button class="element__button" aria-label="heart"></button>
+              </div>
+            </li>
+          </ul>
+        </section>
       </main>
       <footer class="footer">
         <p class="footer__copyright">© 2021 Around The U.S.</p>
@@ -94,9 +119,7 @@
           />
           <button class="form__button" type="submit">Save</button>
         </form>
-        <button class="popup__button">
-          <img src="./images/plus.png" alt="plus" />
-        </button>
+        <button class="popup__button" type="button" aria-label="close"></button>
       </div>
     </div>
     <script src="./pages/index.js"></script>
