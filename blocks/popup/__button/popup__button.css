@@ -1,12 +1,17 @@
 .popup__button {
   position: relative;
-  top: -350px;
+  top: -360px;
   left: 450px;
   width: 40px;
+  background-image: url('../../../images/plus.png');
   background-color: transparent;
+  background-repeat: no-repeat;
+  background-position: center;
   color: white;
   border: none;
   transform: rotate(45deg);
+  width: 40px;
+  height: 40px;
 }
 
 .popup__button:hover {
@@ -16,7 +21,8 @@
 @media screen and (max-width: 580px) {
     .popup__button {
         width: 26px;
-        top: -375px;
+        height: 26px;
+        top: -365px;
         left: 225px;
     }
 }
