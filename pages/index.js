@@ -14,10 +14,7 @@ form.addEventListener('submit', (event) => {
   profileName.textContent = nameInput.value;
   profileAbout.textContent = aboutInput.value;
 
-  saveButton.addEventListener('click', (a)=> {
-    popup.classList.remove('popup__open');
-
-  });
+  popup.classList.toggle('popup__open');
     
   } );
 
