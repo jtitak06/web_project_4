@@ -1,0 +1,18 @@
+.popup__close-button {
+    position: relative;
+    top: -360px;
+    background-image: url('../../../images/plus.png');
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    border: none;
+    transform: rotate(45deg);
+    width: 40px;
+    height: 40px;
+    align-self: flex-end;
+}
+
+.popup__close-button:hover {
+    opacity: .6;
+}

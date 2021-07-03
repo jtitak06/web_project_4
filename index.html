@@ -23,7 +23,7 @@
             <div class="profile__info">
               <h1 class="profile__name">Jacques Cousteau</h1>
               <button
-                class="profile__edit"
+                class="profile__edit animate"
                 type="button"
                 aria-label="edit"
               ></button>
@@ -31,69 +31,25 @@
             <p class="profile__description">Explorer</p>
           </div>
           <button
-            class="profile__add-button"
+            class="profile__add-button animate"
             type="button"
             aria-label="add"
           ></button>
         </section>
         <section>
           <ul class="elements">
-            <li
-              class="element"
-              style="background-image: url('./images/yosemite-valley.png')"
-            >
-              <div class="element__info">
-                <h2 class="element__title">Yosemite Valley</h2>
-                <button class="element__button" aria-label="heart"></button>
+            <template class="element-template">
+              <li
+              class="element">
+              <div class="element__image" style="">
+                <button class="element__delete-button"></button>
+              </div>
+                <div class="element__info">
+                <h2 class="element__title"></h2>
+                <button class="element__button animate"></button>
               </div>
             </li>
-            <li
-              class="element"
-              style="background-image: url('./images/lake-louise.png')"
-            >
-              <div class="element__info">
-                <h2 class="element__title">Lake Louise</h2>
-                <button class="element__button" aria-label="heart"></button>
-              </div>
-            </li>
-            <li
-              class="element"
-              style="background-image: url('./images/bald-mountains.png')"
-            >
-              <div class="element__info">
-                <h2 class="element__title">Bald Mountains</h2>
-                <button class="element__button" aria-label="heart"></button>
-              </div>
-            </li>
-            <li
-              class="element"
-              style="background-image: url('./images/latemar.png')"
-            >
-              <div class="element__info">
-                <h2 class="element__title">Latemar</h2>
-                <button class="element__button" aria-label="heart"></button>
-              </div>
-            </li>
-            <li
-              class="element"
-              style="
-                background-image: url('./images/vanoise-national-park.png');
-              "
-            >
-              <div class="element__info">
-                <h2 class="element__title">Vanoise National Park</h2>
-                <button class="element__button" aria-label="heart"></button>
-              </div>
-            </li>
-            <li
-              class="element"
-              style="background-image: url('./images/lago-di-braies.png')"
-            >
-              <div class="element__info">
-                <h2 class="element__title">Lago di Braies</h2>
-                <button class="element__button" aria-label="heart"></button>
-              </div>
-            </li>
+            </template>
           </ul>
         </section>
       </main>
@@ -101,7 +57,7 @@
         <p class="footer__copyright">© 2021 Around The U.S.</p>
       </footer>
     </div>
-    <div class="popup">
+    <div class="popup popup_type_edit">
       <div class="popup__container">
         <h3 class="popup__title">Edit Profile</h3>
         <form action="#" class="form">
@@ -119,7 +75,39 @@
           />
           <button class="form__button" type="submit">Save</button>
         </form>
-        <button class="popup__button" type="button" aria-label="close"></button>
+        <button class="popup__button animate" type="button" aria-label="close"></button>
+      </div>
+    </div>
+    <div class="popup popup_type_new-item">
+      <div class="popup__container">
+        <h3 class="popup__title">New place</h3>
+        <form action="#" class="form form_new-item">
+          <input
+            type="text"
+            name="title"
+            class="form__input form__input_type_title"
+            placeholder="title"
+          />
+          <input
+            type="url"
+            name="image"
+            class="form__input form__input_type_link"
+            placeholder="Image link"
+          />
+          <button class="form__button" type="submit">Create</button>
+        </form>
+        <button class="popup__button popup__button_new-item animate" type="button" aria-label="close"></button>
+      </div>
+    </div>
+    <div class="popup popup_type_image">
+      <div class="popup__background">
+      <div class="popup__content">
+        <button type="button" class="popup__close-button"></button>
+          <figure class="popup__figure">
+            <img class="popup__image" src="" alt="">
+            <figcaption class="popup__image-title"></figcaption>
+          </figure> 
+      </div>
       </div>
     </div>
     <script src="./pages/index.js"></script>
