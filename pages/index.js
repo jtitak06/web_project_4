@@ -12,8 +12,10 @@ const profileAbout = document.querySelector('.profile__description');
 const popup = document.querySelector('.popup');
 const popupImage = document.querySelector('.popup__image');
 const popupCaption = document.querySelector('.popup__image-title')
-const formNewItem = document.querySelector('.form-new-item');
-const closeImagePopup = imagePopupWindow.querySelector('.popup__close-button')
+const formNewItem = document.querySelector('.form_type_new-item');
+const closeImagePopup = imagePopupWindow.querySelector('.popup__close-button');
+const titleInput = elementWindow.querySelector('.form__input_type_title');
+const linkInput = elementWindow.querySelector('.form__input_type_link');
 
 function togglePopup(popup) {
   popup.classList.toggle('popup__open');
@@ -29,9 +31,6 @@ form.addEventListener('submit', (event) => {
     
   } );
 
-elementWindow.addEventListener('submit', (a) => {
-
-})  
 
 editButton.addEventListener('click', (a)=> {
   popup.classList.toggle('popup__open');
@@ -82,6 +81,11 @@ const initialCards = [
 
 const elementTemplate = document.querySelector('.element-template').content.querySelector('.element');
 const list = document.querySelector('.elements');
+const newElement = {
+  name: titleInput.value,
+  link: linkInput.value
+};
+
 
 initialCards.forEach(data => {
   const elementCard = elementTemplate.cloneNode(true);
@@ -99,7 +103,16 @@ initialCards.forEach(data => {
   });
 
   elementDeleteButton.addEventListener('click', () => {
+    
     elementCard.remove();
+  });
+
+  formNewItem.addEventListener('submit', (evt) => {
+    evt.preventDefault;
+    
+    initialCards.push(newElement);
+    elementCard(newElement);
+    formNewItem.reset();
   });
 
   elementImage.addEventListener('click', () => {
