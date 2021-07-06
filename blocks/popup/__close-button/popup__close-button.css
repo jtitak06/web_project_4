@@ -1,6 +1,7 @@
 .popup__close-button {
-    position: relative;
-    top: -360px;
+    position: absolute;
+    top: 0;
+    right: 0;
     background-image: url('../../../images/plus.png');
     background-color: transparent;
     background-repeat: no-repeat;
