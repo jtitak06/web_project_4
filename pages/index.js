@@ -92,10 +92,14 @@ const newElement = {
   link: linkInput.value,
 };
 
+formNewItem.addEventListener('submit', (event) => {
+  event.preventDefault;
+  renderCard(createCard(newElement));
+  console.log(initialCards);
+});
 
-initialCards.forEach(data => {
+function createCard(data) {
   const elementCard = elementTemplate.cloneNode(true);
-
   const elementImage = elementCard.querySelector('.element__image');
   const elementTitle = elementCard.querySelector('.element__title');
   const elementLikeButton = elementCard.querySelector('.element__button');
@@ -113,26 +117,25 @@ initialCards.forEach(data => {
     elementCard.remove();
   });
 
-  formNewItem.addEventListener('submit', (event) => {
-    event.preventDefault;
-    console.log('create');
-    initialCards.push(newElement);
-    console.log(initialCards);
-   /// elementCard(newElement);
-   /// createButton.reset();
-  });
-
   elementImage.addEventListener('click', () => {
     imagePopupWindow.classList.add('popup__open');
     popupImage.src = data.link;
     popupCaption.textContent = data.name;
-
-  closeImagePopup.addEventListener("click", () => {
-    imagePopupWindow.classList.remove('popup__open');
-    });
   });
 
-  list.prepend(elementCard);
+  return elementCard; 
 
+}
+
+closeImagePopup.addEventListener("click", () => {
+  imagePopupWindow.classList.remove('popup__open');
+  });
+
+const renderCard = (card) => {
+  list.prepend(card);
+}
+
+initialCards.forEach(data => {
+  renderCard(createCard(data));
 });
 
