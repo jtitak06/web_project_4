@@ -94,15 +94,9 @@ const newElement = {
 
 formNewItem.addEventListener('submit', (event) => {
   event.preventDefault;
-  //initialCards.push(newElement);
   renderCard(createCard(newElement));
   console.log(initialCards);
 });
-
-//function handleDelete() {
-  //event.stopPropagation();
-  //elementCard.remove();
-//}
 
 function createCard(data) {
   const elementCard = elementTemplate.cloneNode(true);
@@ -122,8 +116,6 @@ function createCard(data) {
     event.stopPropagation();
     elementCard.remove();
   });
-
-  //elementDeleteButton.addEventListener('click', handleDelete);
 
   elementImage.addEventListener('click', () => {
     imagePopupWindow.classList.add('popup__open');
