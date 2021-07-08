@@ -60,20 +60,22 @@
     <div class="popup popup_type_edit">
       <div class="popup__container">
         <h3 class="popup__title">Edit Profile</h3>
-        <form action="#" class="form">
+        <form action="#" class="form form_type_edit">
           <input
             type="text"
             name="name"
             class="form__input form__input_type_name"
             placeholder="Jacques Cousteau"
+            required
           />
           <input
             type="text"
             name="about"
             class="form__input form__input_type_about"
             placeholder="Explorer"
+            required
           />
-          <button class="form__button" type="submit">Save</button>
+          <button class="form__button form__button_submit" type="submit">Save</button>
         </form>
         <button class="popup__button animate" type="button" aria-label="close"></button>
       </div>
@@ -87,12 +89,14 @@
             name="title"
             class="form__input form__input_type_title"
             placeholder="title"
+            required
           />
           <input
             type="url"
             name="image"
             class="form__input form__input_type_link"
             placeholder="Image link"
+            required
           />
           <button class="form__button form__button-create" type="submit">Create</button>
         </form>
@@ -102,7 +106,7 @@
     <div class="popup popup_type_image">
       <div class="popup__background">
       <div class="popup__content">
-        <button type="button" class="popup__close-button"></button>
+        <button type="button" class="popup__ button popup__close-button"></button>
           <figure class="popup__figure">
             <img class="popup__image" src=" " alt=" ">
             <figcaption class="popup__image-title"></figcaption>
