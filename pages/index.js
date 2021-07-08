@@ -10,6 +10,7 @@ const aboutInput = document.querySelector('.form__input_type_about');
 const profileName = document.querySelector('.profile__name');
 const profileAbout = document.querySelector('.profile__description');
 const popup = document.querySelector('.popup');
+const profilePopup = document.querySelector('.popup_type_edit');
 const popupImage = document.querySelector('.popup__image');
 const popupCaption = document.querySelector('.popup__image-title')
 const formNewItem = document.querySelector('.form_type_new-item');
@@ -22,37 +23,33 @@ function togglePopup(popup) {
   popup.classList.toggle('popup__open');
 };
 
-function openImagePopup() {
-  imagePopupWindow.classList.add('.popup__open');
-};
-
 form.addEventListener('submit', (event) => {
   event.preventDefault();
   
   profileName.textContent = nameInput.value;
   profileAbout.textContent = aboutInput.value;
 
-  popup.classList.toggle('popup__open');
+  togglePopup(profilePopup);
     
   } );
 
 
-editButton.addEventListener('click', (a)=> {
-  popup.classList.toggle('popup__open');
+editButton.addEventListener('click', (event) => {
+  togglePopup(profilePopup);
   
 } );
 
-closeButton.addEventListener('click', (a)=> {
-  popup.classList.toggle('popup__open');
+closeButton.addEventListener('click', (event) => {
+  togglePopup(profilePopup);
   
 } );
 
-addElementButton.addEventListener('click', (a)=> {
-  elementWindow.classList.add('popup__open');
+addElementButton.addEventListener('click', (event) => {
+  togglePopup(elementWindow);
 });
 
-addCloseButton.addEventListener('click', (a)=> {
-  elementWindow.classList.toggle('popup__open');
+addCloseButton.addEventListener('click', (event) => {
+  togglePopup(elementWindow);
 })
 
 
@@ -87,15 +84,16 @@ const initialCards = [
 const elementTemplate = document.querySelector('.element-template').content.querySelector('.element');
 const list = document.querySelector('.elements');
 
-const newElement = {
-  name: titleInput.value,
-  link: linkInput.value,
-};
 
 formNewItem.addEventListener('submit', (event) => {
-  event.preventDefault;
+  event.preventDefault();
+  const newElement = {
+    name: titleInput.value,
+    link: linkInput.value,
+  };
   renderCard(createCard(newElement));
-  console.log(initialCards);
+  togglePopup(elementWindow);
+  formNewItem.reset();
 });
 
 function createCard(data) {
@@ -117,8 +115,8 @@ function createCard(data) {
     elementCard.remove();
   });
 
-  elementImage.addEventListener('click', () => {
-    imagePopupWindow.classList.add('popup__open');
+  elementImage.addEventListener('click', (event) => {
+    togglePopup(imagePopupWindow);
     popupImage.src = data.link;
     popupCaption.textContent = data.name;
   });
@@ -128,8 +126,8 @@ function createCard(data) {
 }
 
 closeImagePopup.addEventListener("click", () => {
-  imagePopupWindow.classList.remove('popup__open');
-  });
+  togglePopup(imagePopupWindow);
+});
 
 const renderCard = (card) => {
   list.prepend(card);
