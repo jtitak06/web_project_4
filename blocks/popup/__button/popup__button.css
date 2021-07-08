@@ -1,7 +1,6 @@
 .popup__button {
-  position: relative;
-  top: -360px;
-  left: 450px;
+  position: absolute;
+  top: -30px;
   background-image: url('../../../images/plus.png');
   background-color: transparent;
   background-repeat: no-repeat;
