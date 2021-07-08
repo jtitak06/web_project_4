@@ -1,6 +1,7 @@
 .popup__close-button {
     width: 40px;
     height: 40px;
+    right: 10px;
 }
 
 .popup__close-button:hover {
